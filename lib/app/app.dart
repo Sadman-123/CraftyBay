@@ -1,3 +1,4 @@
+import 'package:craftybay/auth_screens/login_screen.dart';
 import 'package:craftybay/auth_screens/register_screen.dart';
 import 'package:craftybay/auth_screens/splash_screen.dart';
 import 'package:craftybay/stylesheet/style.dart';
@@ -10,10 +11,11 @@ class CraftyBay extends StatelessWidget
       debugShowCheckedModeBanner: false,
       theme: LightTheme(),
       themeMode: ThemeMode.light,
-      initialRoute: '/register',
+      initialRoute: '/login',
       routes: {
         '/splash':(context)=>SplashScreen(),
-        '/register':(context)=>RegisterScreen()
+        '/register':(context)=>RegisterScreen(),
+        '/login':(context)=>LoginScreen()
       },
     );
   }
