@@ -1,4 +1,6 @@
+import 'package:craftybay/auth_screens/register_screen.dart';
 import 'package:craftybay/auth_screens/splash_screen.dart';
+import 'package:craftybay/stylesheet/style.dart';
 import 'package:flutter/material.dart';
 class CraftyBay extends StatelessWidget
 {
@@ -6,9 +8,12 @@ class CraftyBay extends StatelessWidget
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/splash',
+      theme: LightTheme(),
+      themeMode: ThemeMode.light,
+      initialRoute: '/register',
       routes: {
-        '/splash':(context)=>SplashScreen()
+        '/splash':(context)=>SplashScreen(),
+        '/register':(context)=>RegisterScreen()
       },
     );
   }
