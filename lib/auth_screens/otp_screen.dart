@@ -62,7 +62,6 @@ class OtpScreen extends StatelessWidget{
                 Container(
                   child: TextButton(onPressed: (){}, child: Text("Resend Code",style:Resend_Txt(mdw),))
                 )
-
               ],
             ),
           ),
