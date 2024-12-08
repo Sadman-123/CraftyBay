@@ -15,7 +15,7 @@ class RegisterScreen extends StatelessWidget{
             child: Column(
               children: [
                 Container(
-                  child: SvgPicture.asset('assets/pics/logo.svg',width: mdw*0.295,),
+                  child: Hero(tag: "logo",child: SvgPicture.asset('assets/pics/logo.svg',width: mdw*0.295,)),
                 ),
                 Container(child: Text("Complete Profile",style: Complete_Profile_Txt(mdw),),),
                 Container(child: Text("Get Started with us with your details",style: SubTxt1(mdw),),),

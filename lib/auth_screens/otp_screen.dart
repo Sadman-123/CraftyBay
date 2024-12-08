@@ -16,7 +16,7 @@ class OtpScreen extends StatelessWidget{
             child: Column(
               children: [
                 Container(
-                  child: SvgPicture.asset('assets/pics/logo.svg',width: mdw*0.295,),
+                  child: Hero(tag: "logo",child: SvgPicture.asset('assets/pics/logo.svg',width: mdw*0.295,)),
                 ),
                 Container(child: Text("Enter OTP Code",style: Complete_Profile_Txt(mdw),),),
                 Container(child: Text("A 4 Digit OTP Code has been sent",style: SubTxt1(mdw),),),
