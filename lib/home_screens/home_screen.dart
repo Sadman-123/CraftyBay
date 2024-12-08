@@ -1,6 +1,6 @@
+import 'package:craftybay/diy_components/promo_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../stylesheet/style.dart';
 class HomeScreen extends StatelessWidget{
   @override
@@ -51,6 +51,9 @@ class HomeScreen extends StatelessWidget{
                 ),
                 cursorColor: Cursor_color,
               ),
+            ),
+            Container(
+
             )
           ],
         ),
