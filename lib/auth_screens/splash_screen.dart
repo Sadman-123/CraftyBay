@@ -1,7 +1,20 @@
 import 'package:craftybay/stylesheet/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-class SplashScreen extends StatelessWidget{
+class SplashScreen extends StatefulWidget{
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Future.delayed(Duration(seconds: 3),() {
+      Navigator.pushReplacementNamed(context, '/login');
+    },);
+  }
   @override
   Widget build(BuildContext context) {
     var mdh=MediaQuery.sizeOf(context).height;
@@ -16,7 +29,7 @@ class SplashScreen extends StatelessWidget{
           children: [
             SizedBox(height: mdh*0.2,),
             Container(
-              child: SvgPicture.asset('assets/pics/logo.svg',width: mdw*0.35,),
+              child: Hero(tag: "logo",child: SvgPicture.asset('assets/pics/logo.svg',width: mdw*0.35,)),
             ),
             Spacer(),
             CircularProgressIndicator(color: Color(0xFF06afaf),),

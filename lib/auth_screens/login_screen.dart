@@ -15,7 +15,7 @@ class LoginScreen extends StatelessWidget{
             child: Column(
               children: [
                 Container(
-                  child: SvgPicture.asset('assets/pics/logo.svg',width: mdw*0.295,),
+                  child: Hero(tag: "logo",child: SvgPicture.asset('assets/pics/logo.svg',width: mdw*0.295,)),
                 ),
                 Container(child: Text("Welcome Back",style: Complete_Profile_Txt(mdw),),),
                 Container(child: Text("Please Enter Your Email Address",style: SubTxt1(mdw),),),
