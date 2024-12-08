@@ -24,6 +24,22 @@ ThemeData LightTheme()
         color: Color(0xFFc5c5c4)
       ),
     ),
+    bottomNavigationBarTheme:BottomNavigationBarThemeData(
+      selectedIconTheme: IconThemeData(
+        color: Cursor_color
+      ),
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+      selectedItemColor: Cursor_color,
+      unselectedItemColor: Color(0xFFc6c7c6),
+      unselectedLabelStyle: TextStyle(
+        color: Color(0xFFc9c8c8)
+      ),
+      unselectedIconTheme: IconThemeData(color: Color(0xFF818181)),
+      selectedLabelStyle: TextStyle(
+        color: Cursor_color,
+      )
+    ),
     fontFamily: "gfont"
   );
 }

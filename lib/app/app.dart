@@ -2,6 +2,7 @@ import 'package:craftybay/auth_screens/login_screen.dart';
 import 'package:craftybay/auth_screens/otp_screen.dart';
 import 'package:craftybay/auth_screens/register_screen.dart';
 import 'package:craftybay/auth_screens/splash_screen.dart';
+import 'package:craftybay/home_screens/home_screen.dart';
 import 'package:craftybay/stylesheet/style.dart';
 import 'package:flutter/material.dart';
 class CraftyBay extends StatelessWidget
@@ -12,12 +13,13 @@ class CraftyBay extends StatelessWidget
       debugShowCheckedModeBanner: false,
       theme: LightTheme(),
       themeMode: ThemeMode.light,
-      initialRoute: '/splash',
+      initialRoute: '/home',
       routes: {
         '/splash':(context)=>SplashScreen(),
         '/register':(context)=>RegisterScreen(),
         '/login':(context)=>LoginScreen(),
-        '/otp':(context)=>OtpScreen()
+        '/otp':(context)=>OtpScreen(),
+        '/home':(context)=>HomeScreen()
       },
     );
   }
