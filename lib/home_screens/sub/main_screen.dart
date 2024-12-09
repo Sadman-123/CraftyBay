@@ -15,6 +15,7 @@ class MainScreen extends StatelessWidget{
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            pinned: false,
             title: SvgPicture.asset('assets/pics/logo_nav.svg',width: mdw*0.42,),
             actions: [
               Padding(
