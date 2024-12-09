@@ -1,6 +1,7 @@
 import 'package:craftybay/diy_components/category_card.dart';
 import 'package:craftybay/diy_components/product_card.dart';
 import 'package:craftybay/diy_components/text_related/heading_title.dart';
+import 'package:craftybay/home_screens/sub/category_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -12,6 +13,24 @@ class MainScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     var mdw=MediaQuery.sizeOf(context).width;
     var mdh=MediaQuery.sizeOf(context).height;
+    var dat=[
+      {
+        "category_title":"Electronis",
+        "category_icon":FaIcon(FontAwesomeIcons.laptop,color: Color(0xFF07afae))
+      },
+      {
+        "category_title":"Food",
+        "category_icon":FaIcon(FontAwesomeIcons.utensils,color: Color(0xFF07afae))
+      },
+      {
+        "category_title":"Fashion",
+        "category_icon":FaIcon(FontAwesomeIcons.gem,color: Color(0xFF07afae))
+      },
+      {
+        "category_title":"Furniture",
+        "category_icon":FaIcon(FontAwesomeIcons.couch,color: Color(0xFF07afae))
+      },
+    ];
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -80,25 +99,16 @@ class MainScreen extends StatelessWidget{
                       height: mdh*0.15,
                       child: Column(
                         children: [
-                          HeadingTitle(mdw: mdw, title: "All categories", onseeAllTap: (){}),
+                          HeadingTitle(mdw: mdw, title: "All categories", onseeAllTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => CategoryScreen(),));}),
                           SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: Container(
                               child: Row(
-                                children: [
-                                  CategoryCard(mdw: mdw, category_title: "Electronis", category_icon: FaIcon(FontAwesomeIcons.laptop,color: Color(0xFF07afae))),
-                                  CategoryCard(mdw: mdw, category_title: "Food", category_icon: FaIcon(FontAwesomeIcons.utensils,color: Color(0xFF07afae))),
-                                  CategoryCard(mdw: mdw, category_title: "Fashion", category_icon: FaIcon(FontAwesomeIcons.gem,color: Color(0xFF07afae))),
-                                  CategoryCard(mdw: mdw, category_title: "Furniture", category_icon:FaIcon(FontAwesomeIcons.couch,color: Color(0xFF07afae))),
-                                  CategoryCard(mdw: mdw, category_title: "Electronis", category_icon: FaIcon(FontAwesomeIcons.laptop,color: Color(0xFF07afae))),
-                                  CategoryCard(mdw: mdw, category_title: "Food", category_icon: FaIcon(FontAwesomeIcons.utensils,color: Color(0xFF07afae))),
-                                  CategoryCard(mdw: mdw, category_title: "Fashion", category_icon: FaIcon(FontAwesomeIcons.gem,color: Color(0xFF07afae))),
-                                  CategoryCard(mdw: mdw, category_title: "Furniture", category_icon:FaIcon(FontAwesomeIcons.couch,color: Color(0xFF07afae))),
-                                ],
+                                children: List.generate(dat.length, (index) => CategoryCard(mdw: mdw, category_title: dat[index]['category_title'].toString(), category_icon: dat[index]['category_icon'] as Widget,),
                               ),
                             ),
                           )
-                        ],
+                          )],
                       ),
                     ),
                     Container(

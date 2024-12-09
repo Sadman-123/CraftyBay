@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.house),label: "Home"),
           BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.cubes),label: "Category"),
           BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.basketShopping),label: "Cart"),
-          BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.gift),label: "Wishlist"),
+          BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.gift),label: "Wish"),
         ],
       ),
     );
