@@ -1,7 +1,9 @@
+import 'package:craftybay/diy_components/category_card.dart';
+import 'package:craftybay/diy_components/product_card.dart';
+import 'package:craftybay/diy_components/text_related/heading_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../diy_components/promo_card.dart';
 import '../../stylesheet/style.dart';
 class MainScreen extends StatelessWidget{
@@ -76,164 +78,20 @@ class MainScreen extends StatelessWidget{
                       height: mdh*0.15,
                       child: Column(
                         children: [
-                          Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("All categories",style: TextStyle(color: Color(0xFF515150),fontWeight: FontWeight.bold,fontSize: mdw*0.06),),
-                                InkWell(onTap:(){},child: Text("See All",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.045),))
-                              ],
-                            ),
-                          ),
+                          HeadingTitle(mdw: mdw, title: "All categories", onseeAllTap: (){}),
                           SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: Container(
                               child: Row(
                                 children: [
-                                  Container(
-                                    child: Container(
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            child: FaIcon(FontAwesomeIcons.laptop,color: Color(0xFF07afae)),
-                                            decoration: BoxDecoration(
-                                                color: Color(0xFFe6f7f6),
-                                                borderRadius: BorderRadius.circular(14)
-                                            ),
-                                            padding: EdgeInsets.all(15),
-                                          ),
-                                          Container(child: Text("Electronis",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.044),),)
-                                        ],
-                                      ),
-                                    ),
-                                    margin: EdgeInsets.all(5),
-                                  ),
-                                  Container(
-                                    child: Container(
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            child: FaIcon(FontAwesomeIcons.utensils,color: Color(0xFF07afae)),
-                                            decoration: BoxDecoration(
-                                                color: Color(0xFFe6f7f6),
-                                                borderRadius: BorderRadius.circular(14)
-                                            ),
-                                            padding: EdgeInsets.all(15),
-                                          ),
-                                          Container(child: Text("Food",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.044),),)
-                                        ],
-                                      ),
-                                    ),
-                                    margin: EdgeInsets.all(5),
-                                  ),
-                                  Container(
-                                    child: Container(
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            child: FaIcon(FontAwesomeIcons.gem,color: Color(0xFF07afae)),
-                                            decoration: BoxDecoration(
-                                                color: Color(0xFFe6f7f6),
-                                                borderRadius: BorderRadius.circular(14)
-                                            ),
-                                            padding: EdgeInsets.all(15),
-                                          ),
-                                          Container(child: Text("Fashion",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.044),),)
-                                        ],
-                                      ),
-                                    ),
-                                    margin: EdgeInsets.all(5),
-                                  ),
-                                  Container(
-                                    child: Container(
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            child: FaIcon(FontAwesomeIcons.couch,color: Color(0xFF07afae),),
-                                            decoration: BoxDecoration(
-                                                color: Color(0xFFe6f7f6),
-                                                borderRadius: BorderRadius.circular(14)
-                                            ),
-                                            padding: EdgeInsets.all(15),
-                                          ),
-                                          Container(child: Text("Furniture",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.044),),)
-                                        ],
-                                      ),
-                                    ),
-                                    margin: EdgeInsets.all(5),
-                                  ),
-                                  Container(
-                                    child: Container(
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            child: FaIcon(FontAwesomeIcons.laptop,color: Color(0xFF07afae)),
-                                            decoration: BoxDecoration(
-                                                color: Color(0xFFe6f7f6),
-                                                borderRadius: BorderRadius.circular(14)
-                                            ),
-                                            padding: EdgeInsets.all(15),
-                                          ),
-                                          Container(child: Text("Electronis",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.044),),)
-                                        ],
-                                      ),
-                                    ),
-                                    margin: EdgeInsets.all(5),
-                                  ),
-                                  Container(
-                                    child: Container(
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            child: FaIcon(FontAwesomeIcons.utensils,color: Color(0xFF07afae)),
-                                            decoration: BoxDecoration(
-                                                color: Color(0xFFe6f7f6),
-                                                borderRadius: BorderRadius.circular(14)
-                                            ),
-                                            padding: EdgeInsets.all(15),
-                                          ),
-                                          Container(child: Text("Food",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.044),),)
-                                        ],
-                                      ),
-                                    ),
-                                    margin: EdgeInsets.all(5),
-                                  ),
-                                  Container(
-                                    child: Container(
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            child: FaIcon(FontAwesomeIcons.gem,color: Color(0xFF07afae)),
-                                            decoration: BoxDecoration(
-                                                color: Color(0xFFe6f7f6),
-                                                borderRadius: BorderRadius.circular(14)
-                                            ),
-                                            padding: EdgeInsets.all(15),
-                                          ),
-                                          Container(child: Text("Fashion",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.044),),)
-                                        ],
-                                      ),
-                                    ),
-                                    margin: EdgeInsets.all(5),
-                                  ),
-                                  Container(
-                                    child: Container(
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            child: FaIcon(FontAwesomeIcons.couch,color: Color(0xFF07afae),),
-                                            decoration: BoxDecoration(
-                                                color: Color(0xFFe6f7f6),
-                                                borderRadius: BorderRadius.circular(14)
-                                            ),
-                                            padding: EdgeInsets.all(15),
-                                          ),
-                                          Container(child: Text("Furniture",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.044),),)
-                                        ],
-                                      ),
-                                    ),
-                                    margin: EdgeInsets.all(5),
-                                  ),
+                                  CategoryCard(mdw: mdw, category_title: "Electronis", category_icon: FaIcon(FontAwesomeIcons.laptop,color: Color(0xFF07afae))),
+                                  CategoryCard(mdw: mdw, category_title: "Food", category_icon: FaIcon(FontAwesomeIcons.utensils,color: Color(0xFF07afae))),
+                                  CategoryCard(mdw: mdw, category_title: "Fashion", category_icon: FaIcon(FontAwesomeIcons.gem,color: Color(0xFF07afae))),
+                                  CategoryCard(mdw: mdw, category_title: "Furniture", category_icon:FaIcon(FontAwesomeIcons.couch,color: Color(0xFF07afae))),
+                                  CategoryCard(mdw: mdw, category_title: "Electronis", category_icon: FaIcon(FontAwesomeIcons.laptop,color: Color(0xFF07afae))),
+                                  CategoryCard(mdw: mdw, category_title: "Food", category_icon: FaIcon(FontAwesomeIcons.utensils,color: Color(0xFF07afae))),
+                                  CategoryCard(mdw: mdw, category_title: "Fashion", category_icon: FaIcon(FontAwesomeIcons.gem,color: Color(0xFF07afae))),
+                                  CategoryCard(mdw: mdw, category_title: "Furniture", category_icon:FaIcon(FontAwesomeIcons.couch,color: Color(0xFF07afae))),
                                 ],
                               ),
                             ),
@@ -250,15 +108,7 @@ class MainScreen extends StatelessWidget{
                       width: double.infinity,
                       child: Column(
                         children: [
-                          Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("Popular",style: TextStyle(color: Color(0xFF515150),fontWeight: FontWeight.bold,fontSize: mdw*0.06),),
-                                InkWell(onTap:(){},child: Text("See All",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.045),))
-                              ],
-                            ),
-                          ),
+                          HeadingTitle(mdw: mdw, title: "Popular", onseeAllTap: (){}),
                           SizedBox(
                               height:mdh*0.01
                           ),
@@ -267,206 +117,10 @@ class MainScreen extends StatelessWidget{
                             child: Container(
                               child: Row(
                                 children: [
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
                                 ],
                               ),
                             ),
@@ -483,15 +137,7 @@ class MainScreen extends StatelessWidget{
                       ),
                       child: Column(
                         children: [
-                          Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("Special",style: TextStyle(color: Color(0xFF515150),fontWeight: FontWeight.bold,fontSize: mdw*0.06),),
-                                InkWell(onTap:(){},child: Text("See All",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.045),))
-                              ],
-                            ),
-                          ),
+                          HeadingTitle(mdw: mdw, title: "Special", onseeAllTap: (){}),
                           SizedBox(
                               height:mdh*0.01
                           ),
@@ -500,206 +146,10 @@ class MainScreen extends StatelessWidget{
                             child: Container(
                               child: Row(
                                 children: [
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
                                 ],
                               ),
                             ),
@@ -716,15 +166,7 @@ class MainScreen extends StatelessWidget{
                       width: double.infinity,
                       child: Column(
                         children: [
-                          Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("New",style: TextStyle(color: Color(0xFF515150),fontWeight: FontWeight.bold,fontSize: mdw*0.06),),
-                                InkWell(onTap: (){},child: Text("See All",style: TextStyle(color: Color(0xFF07afae),fontSize: mdw*0.045),))
-                              ],
-                            ),
-                          ),
+                          HeadingTitle(mdw: mdw, title: "New", onseeAllTap: (){}),
                           SizedBox(
                               height:mdh*0.01
                           ),
@@ -733,206 +175,10 @@ class MainScreen extends StatelessWidget{
                             child: Container(
                               child: Row(
                                 children: [
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Card(
-                                    child: Container(
-                                      height: mdh*0.22,
-                                      width: mdw*0.45,
-                                      child: Column(
-                                        children: [
-                                          Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
-                                          Expanded(
-                                              flex: 2,
-                                              child: Container(
-                                                padding: EdgeInsets.all(5),
-                                                child: Column(
-                                                  children: [
-                                                    Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
-                                                    Container(
-                                                      child: Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                        children: [
-                                                          Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
-                                                          RichText(
-                                                            text: TextSpan(
-                                                                style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
-                                                                children: [
-                                                                  TextSpan(text: "⭐"),
-                                                                  TextSpan(text: "4.5")
-                                                                ]
-                                                            ),
-                                                          ),
-                                                          InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
                                 ],
                               ),
                             ),
