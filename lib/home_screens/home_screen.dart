@@ -263,17 +263,13 @@ class HomeScreen extends StatelessWidget{
                       child: Container(
                         child: Row(
                           children: [
-                           Card(
+                            Card(
                              child: Container(
                                height: mdh*0.22,
                                width: mdw*0.45,
-                               margin: EdgeInsets.only(
-                                 left: 10,
-                                 right: 10
-                               ),
                                child: Column(
                                  children: [
-                                   Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                   Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                    Expanded(
                                      flex: 2,
                                        child: Container(
@@ -311,13 +307,9 @@ class HomeScreen extends StatelessWidget{
                               child: Container(
                                 height: mdh*0.22,
                                 width: mdw*0.45,
-                                margin: EdgeInsets.only(
-                                    left: 10,
-                                    right: 10
-                                ),
                                 child: Column(
                                   children: [
-                                    Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                     Expanded(
                                         flex: 2,
                                         child: Container(
@@ -355,13 +347,9 @@ class HomeScreen extends StatelessWidget{
                               child: Container(
                                 height: mdh*0.22,
                                 width: mdw*0.45,
-                                margin: EdgeInsets.only(
-                                    left: 10,
-                                    right: 10
-                                ),
                                 child: Column(
                                   children: [
-                                    Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                     Expanded(
                                         flex: 2,
                                         child: Container(
@@ -399,13 +387,9 @@ class HomeScreen extends StatelessWidget{
                               child: Container(
                                 height: mdh*0.22,
                                 width: mdw*0.45,
-                                margin: EdgeInsets.only(
-                                    left: 10,
-                                    right: 10
-                                ),
                                 child: Column(
                                   children: [
-                                    Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                     Expanded(
                                         flex: 2,
                                         child: Container(
@@ -439,7 +423,46 @@ class HomeScreen extends StatelessWidget{
                                 ),
                               ),
                             ),
-
+                            Card(
+                              child: Container(
+                                height: mdh*0.22,
+                                width: mdw*0.45,
+                                child: Column(
+                                  children: [
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
+                                    Expanded(
+                                        flex: 2,
+                                        child: Container(
+                                          padding: EdgeInsets.all(5),
+                                          child: Column(
+                                            children: [
+                                              Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
+                                              Container(
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  children: [
+                                                    Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
+                                                    RichText(
+                                                      text: TextSpan(
+                                                          style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
+                                                          children: [
+                                                            TextSpan(text: "⭐"),
+                                                            TextSpan(text: "4.5")
+                                                          ]
+                                                      ),
+                                                    ),
+                                                    InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                                                  ],
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        )
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -448,12 +471,12 @@ class HomeScreen extends StatelessWidget{
                 ),
               ),
               Container(
+                width: double.infinity,
                 margin: EdgeInsets.only(
                     left: 10,
                     right: 10,
                     top: 10
                 ),
-                width: double.infinity,
                 child: Column(
                   children: [
                     Container(
@@ -477,13 +500,9 @@ class HomeScreen extends StatelessWidget{
                               child: Container(
                                 height: mdh*0.22,
                                 width: mdw*0.45,
-                                margin: EdgeInsets.only(
-                                    left: 10,
-                                    right: 10
-                                ),
                                 child: Column(
                                   children: [
-                                    Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                     Expanded(
                                         flex: 2,
                                         child: Container(
@@ -505,7 +524,7 @@ class HomeScreen extends StatelessWidget{
                                                           ]
                                                       ),
                                                     ),
-                                                    InkWell(onTap: (){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                                                    InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
                                                   ],
                                                 ),
                                               )
@@ -521,13 +540,9 @@ class HomeScreen extends StatelessWidget{
                               child: Container(
                                 height: mdh*0.22,
                                 width: mdw*0.45,
-                                margin: EdgeInsets.only(
-                                    left: 10,
-                                    right: 10
-                                ),
                                 child: Column(
                                   children: [
-                                    Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                     Expanded(
                                         flex: 2,
                                         child: Container(
@@ -549,7 +564,7 @@ class HomeScreen extends StatelessWidget{
                                                           ]
                                                       ),
                                                     ),
-                                                    InkWell(onTap: (){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                                                    InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
                                                   ],
                                                 ),
                                               )
@@ -565,13 +580,9 @@ class HomeScreen extends StatelessWidget{
                               child: Container(
                                 height: mdh*0.22,
                                 width: mdw*0.45,
-                                margin: EdgeInsets.only(
-                                    left: 10,
-                                    right: 10
-                                ),
                                 child: Column(
                                   children: [
-                                    Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                     Expanded(
                                         flex: 2,
                                         child: Container(
@@ -593,7 +604,7 @@ class HomeScreen extends StatelessWidget{
                                                           ]
                                                       ),
                                                     ),
-                                                    InkWell(onTap: (){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                                                    InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
                                                   ],
                                                 ),
                                               )
@@ -609,13 +620,9 @@ class HomeScreen extends StatelessWidget{
                               child: Container(
                                 height: mdh*0.22,
                                 width: mdw*0.45,
-                                margin: EdgeInsets.only(
-                                    left: 10,
-                                    right: 10
-                                ),
                                 child: Column(
                                   children: [
-                                    Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                     Expanded(
                                         flex: 2,
                                         child: Container(
@@ -637,7 +644,7 @@ class HomeScreen extends StatelessWidget{
                                                           ]
                                                       ),
                                                     ),
-                                                    InkWell(onTap: (){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                                                    InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
                                                   ],
                                                 ),
                                               )
@@ -649,7 +656,46 @@ class HomeScreen extends StatelessWidget{
                                 ),
                               ),
                             ),
-
+                            Card(
+                              child: Container(
+                                height: mdh*0.22,
+                                width: mdw*0.45,
+                                child: Column(
+                                  children: [
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
+                                    Expanded(
+                                        flex: 2,
+                                        child: Container(
+                                          padding: EdgeInsets.all(5),
+                                          child: Column(
+                                            children: [
+                                              Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
+                                              Container(
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  children: [
+                                                    Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
+                                                    RichText(
+                                                      text: TextSpan(
+                                                          style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
+                                                          children: [
+                                                            TextSpan(text: "⭐"),
+                                                            TextSpan(text: "4.5")
+                                                          ]
+                                                      ),
+                                                    ),
+                                                    InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                                                  ],
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        )
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -687,13 +733,9 @@ class HomeScreen extends StatelessWidget{
                               child: Container(
                                 height: mdh*0.22,
                                 width: mdw*0.45,
-                                margin: EdgeInsets.only(
-                                    left: 10,
-                                    right: 10
-                                ),
                                 child: Column(
                                   children: [
-                                    Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                     Expanded(
                                         flex: 2,
                                         child: Container(
@@ -715,7 +757,7 @@ class HomeScreen extends StatelessWidget{
                                                           ]
                                                       ),
                                                     ),
-                                                    InkWell(onTap: (){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                                                    InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
                                                   ],
                                                 ),
                                               )
@@ -731,13 +773,9 @@ class HomeScreen extends StatelessWidget{
                               child: Container(
                                 height: mdh*0.22,
                                 width: mdw*0.45,
-                                margin: EdgeInsets.only(
-                                    left: 10,
-                                    right: 10
-                                ),
                                 child: Column(
                                   children: [
-                                    Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                     Expanded(
                                         flex: 2,
                                         child: Container(
@@ -759,7 +797,7 @@ class HomeScreen extends StatelessWidget{
                                                           ]
                                                       ),
                                                     ),
-                                                    InkWell(onTap: (){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                                                    InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
                                                   ],
                                                 ),
                                               )
@@ -775,13 +813,9 @@ class HomeScreen extends StatelessWidget{
                               child: Container(
                                 height: mdh*0.22,
                                 width: mdw*0.45,
-                                margin: EdgeInsets.only(
-                                    left: 10,
-                                    right: 10
-                                ),
                                 child: Column(
                                   children: [
-                                    Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                     Expanded(
                                         flex: 2,
                                         child: Container(
@@ -803,7 +837,7 @@ class HomeScreen extends StatelessWidget{
                                                           ]
                                                       ),
                                                     ),
-                                                    InkWell(onTap: (){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                                                    InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
                                                   ],
                                                 ),
                                               )
@@ -819,13 +853,9 @@ class HomeScreen extends StatelessWidget{
                               child: Container(
                                 height: mdh*0.22,
                                 width: mdw*0.45,
-                                margin: EdgeInsets.only(
-                                    left: 10,
-                                    right: 10
-                                ),
                                 child: Column(
                                   children: [
-                                    Expanded(flex: 2,child: Container(decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png'),),)),
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
                                     Expanded(
                                         flex: 2,
                                         child: Container(
@@ -847,7 +877,47 @@ class HomeScreen extends StatelessWidget{
                                                           ]
                                                       ),
                                                     ),
-                                                    InkWell(onTap: (){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                                                    InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                                                  ],
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        )
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Card(
+                              child: Container(
+                                height: mdh*0.22,
+                                width: mdw*0.45,
+                                child: Column(
+                                  children: [
+                                    Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Image.asset('assets/pics/shoe.png',width: mdw*0.5,),),)),
+                                    Expanded(
+                                        flex: 2,
+                                        child: Container(
+                                          padding: EdgeInsets.all(5),
+                                          child: Column(
+                                            children: [
+                                              Container(child: Text("New year Special Shoe 30",overflow: TextOverflow.ellipsis,maxLines:2,style: TextStyle(color: Color(0xFF757574),fontSize: mdw*0.041,fontWeight: FontWeight.bold),)),
+                                              Container(
+                                                child: Row(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  children: [
+                                                    Text("\$100",style: TextStyle(color: Color(0xFF2fbaba),fontSize: mdw*0.058),),
+                                                    RichText(
+                                                      text: TextSpan(
+                                                          style: TextStyle(fontSize: mdw*0.048,color: Color(0xFF6f6f6f)),
+                                                          children: [
+                                                            TextSpan(text: "⭐"),
+                                                            TextSpan(text: "4.5")
+                                                          ]
+                                                      ),
+                                                    ),
+                                                    InkWell(onTap:(){},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
                                                   ],
                                                 ),
                                               )
