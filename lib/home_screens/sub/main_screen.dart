@@ -1,6 +1,7 @@
 import 'package:craftybay/diy_components/category_card.dart';
 import 'package:craftybay/diy_components/product_card.dart';
 import 'package:craftybay/diy_components/text_related/heading_title.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -20,15 +21,15 @@ class MainScreen extends StatelessWidget{
             actions: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(backgroundColor: Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.bell)),),
+                child: CircleAvatar(backgroundColor: Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.bell)),),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(backgroundColor: Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.phone)),),
+                child: CircleAvatar(backgroundColor: Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.phone)),),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(backgroundColor: Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.user)),),
+                child: CircleAvatar(backgroundColor: Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.person)),),
               ),
             ],
           ),
