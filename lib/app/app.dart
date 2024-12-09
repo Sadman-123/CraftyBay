@@ -3,6 +3,7 @@ import 'package:craftybay/auth_screens/otp_screen.dart';
 import 'package:craftybay/auth_screens/register_screen.dart';
 import 'package:craftybay/auth_screens/splash_screen.dart';
 import 'package:craftybay/home_screens/home_screen.dart';
+import 'package:craftybay/home_screens/sub/product_details.dart';
 import 'package:craftybay/stylesheet/style.dart';
 import 'package:flutter/material.dart';
 class CraftyBay extends StatelessWidget
@@ -19,7 +20,8 @@ class CraftyBay extends StatelessWidget
         '/register':(context)=>RegisterScreen(),
         '/login':(context)=>LoginScreen(),
         '/otp':(context)=>OtpScreen(),
-        '/home':(context)=>HomeScreen()
+        '/home':(context)=>HomeScreen(),
+        '/product_details':(context)=>ProductDetails()
       },
     );
   }
