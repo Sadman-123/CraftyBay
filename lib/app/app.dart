@@ -14,7 +14,7 @@ class CraftyBay extends StatelessWidget
       debugShowCheckedModeBanner: false,
       theme: LightTheme(),
       themeMode: ThemeMode.light,
-      initialRoute: '/home',
+      initialRoute: '/splash',
       routes: {
         '/splash':(context)=>SplashScreen(),
         '/register':(context)=>RegisterScreen(),
