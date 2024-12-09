@@ -2,6 +2,7 @@ import 'package:craftybay/diy_components/category_card.dart';
 import 'package:craftybay/diy_components/product_card.dart';
 import 'package:craftybay/diy_components/text_related/heading_title.dart';
 import 'package:craftybay/home_screens/sub/category_screen.dart';
+import 'package:craftybay/home_screens/sub/user_review_part/create_review.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -120,7 +121,7 @@ class MainScreen extends StatelessWidget{
                       width: double.infinity,
                       child: Column(
                         children: [
-                          HeadingTitle(mdw: mdw, title: "Popular", onseeAllTap: (){}),
+                          HeadingTitle(mdw: mdw, title: "Popular", onseeAllTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => CreateReview(),));}),
                           SizedBox(
                               height:mdh*0.01
                           ),
