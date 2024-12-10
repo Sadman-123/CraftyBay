@@ -5,7 +5,8 @@ Widget Product_Card({required double mdh,required double mdw,required String pro
   return Card(
     color: Color(0xFFfffefe),
     margin: EdgeInsets.only(
-      left: 13
+      left: 13,
+      bottom: 5
     ),
     child: Container(
       height: mdh*0.22,
