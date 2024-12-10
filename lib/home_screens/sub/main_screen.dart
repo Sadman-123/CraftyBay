@@ -1,15 +1,18 @@
 import 'package:craftybay/diy_components/category_card.dart';
 import 'package:craftybay/diy_components/product_card.dart';
 import 'package:craftybay/diy_components/text_related/heading_title.dart';
+import 'package:craftybay/home_screens/controllers/homecontroller.dart';
 import 'package:craftybay/home_screens/sub/category_screen.dart';
 import 'package:craftybay/home_screens/sub/user_review_part/create_review.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import '../../diy_components/promo_card.dart';
 import '../../stylesheet/style.dart';
 class MainScreen extends StatelessWidget{
+  Homecontroller home=Get.find();
   @override
   Widget build(BuildContext context) {
     var mdw=MediaQuery.sizeOf(context).width;
@@ -36,6 +39,7 @@ class MainScreen extends StatelessWidget{
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            automaticallyImplyLeading: false,
             pinned: false,
             title: SvgPicture.asset('assets/pics/logo_nav.svg',width: mdw*0.42,),
             actions: [
@@ -100,7 +104,7 @@ class MainScreen extends StatelessWidget{
                       height: mdh*0.15,
                       child: Column(
                         children: [
-                          HeadingTitle(mdw: mdw, title: "All categories", onseeAllTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => CategoryScreen(),));}),
+                          HeadingTitle(mdw: mdw, title: "All categories", onseeAllTap: (){home.ind.value=1;}),
                           SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: Container(

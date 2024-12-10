@@ -1,8 +1,12 @@
 import 'package:craftybay/diy_components/category_card.dart';
+import 'package:craftybay/home_screens/controllers/homecontroller.dart';
+import 'package:craftybay/home_screens/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 class CategoryScreen extends StatelessWidget {
+  Homecontroller home=Get.find();
   @override
   Widget build(BuildContext context) {
     var mdw = MediaQuery.sizeOf(context).width;
@@ -114,7 +118,7 @@ class CategoryScreen extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {
-                    Navigator.pop(context);
+                    Get.toNamed('/home');
                   },
                   icon: Icon(
                     CupertinoIcons.chevron_left,

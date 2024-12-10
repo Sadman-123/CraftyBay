@@ -9,6 +9,7 @@ class CartScreen extends StatelessWidget{
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            automaticallyImplyLeading: false,
             title: Row(
               children: [
                 IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.chevron_left,color: Color(0xFF010001),)),
