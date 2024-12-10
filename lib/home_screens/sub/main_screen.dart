@@ -130,10 +130,10 @@ class MainScreen extends StatelessWidget{
                             child: Container(
                               child: Row(
                                 children: [
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '1200', product_rating: '5.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
                                 ],
                               ),
                             ),
@@ -159,10 +159,10 @@ class MainScreen extends StatelessWidget{
                             child: Container(
                               child: Row(
                                 children: [
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
                                 ],
                               ),
                             ),
@@ -188,10 +188,10 @@ class MainScreen extends StatelessWidget{
                             child: Container(
                               child: Row(
                                 children: [
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
                                 ],
                               ),
                             ),

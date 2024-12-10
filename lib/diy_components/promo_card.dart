@@ -98,7 +98,6 @@ class _BannerCarouselState extends State<BannerCarousel> {
                   Expanded(
                     child: InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, '/product_details');
                       },
                       child: Container(
                         child: Center(
