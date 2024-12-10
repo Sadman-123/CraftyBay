@@ -27,7 +27,11 @@ class ProductDetails extends StatelessWidget{
        ),
      ),
      body: Container(
-       padding: EdgeInsets.all(10),
+       padding: EdgeInsets.only(
+         left: 10,
+         right: 10,
+         top: 10
+       ),
        child: Column(
          children: [
            Expanded(flex: 3,child: Container(
