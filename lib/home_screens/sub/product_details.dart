@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class ProductDetails extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     var mdw=MediaQuery.sizeOf(context).width;
     var mdh=MediaQuery.sizeOf(context).height;
-    final Map<String, dynamic>? args = ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
-    final String productPic = args?['product_pic'] ?? '';
-    final String productTitle = args?['product_title'] ?? '';
-    final String productPrice = args?['product_price'] ?? '';
-    final String productRating = args?['product_rating'] ?? '';
+    final data = Get.arguments;
+    final String productPic = data['product_pic'];
+    final String productTitle = data['product_title'];
+    final String productPrice = data['product_price'];
+    final String productRating = data['product_rating'];
    return Scaffold(
      appBar: AppBar(
        automaticallyImplyLeading: false,

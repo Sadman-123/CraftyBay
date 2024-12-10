@@ -1,15 +1,18 @@
+import 'package:craftybay/home_screens/controllers/homecontroller.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 Widget Product_Card({required BuildContext context,required double mdh,required double mdw,required String product_pic,required String product_title,required String product_price,required String product_rating,required VoidCallback onLike})
 {
+  Homecontroller home=Get.find();
   return InkWell(
     onTap: (){
-      Navigator.pushNamed(context, '/product_details',arguments: {
+      Get.toNamed('/product_details',arguments:{
         'product_pic':product_pic,
         'product_title':product_title,
         'product_price':product_price,
         'product_rating':product_rating
-      });
+      } );
     },
     child: Card(
       color: Color(0xFFfffefe),
