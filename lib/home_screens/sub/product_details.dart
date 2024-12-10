@@ -118,46 +118,11 @@ class ProductDetails extends StatelessWidget{
                            child: Row(
                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                              children: [
-                               Container(
-                                 height:mdh*0.085,
-                                 width:mdw*0.085,
-                                 decoration: BoxDecoration(
-                                   color: Color(0xFF202120),
-                                   shape: BoxShape.circle,
-                                 ),
-                               ),
-                               Container(
-                                 height:mdh*0.085,
-                                 width:mdw*0.085,
-                                 decoration: BoxDecoration(
-                                   color: Color(0xFF0e99b0),
-                                   shape: BoxShape.circle,
-                                 ),
-                               ),
-                               Container(
-                                 height:mdh*0.085,
-                                 width:mdw*0.085,
-                                 decoration: BoxDecoration(
-                                   color: Color(0xFF7a5449),
-                                   shape: BoxShape.circle,
-                                 ),
-                               ),
-                               Container(
-                                 height:mdh*0.085,
-                                 width:mdw*0.085,
-                                 decoration: BoxDecoration(
-                                   color: Color(0xFFd9d9d9),
-                                   shape: BoxShape.circle,
-                                 ),
-                               ),
-                               Container(
-                                 height:mdh*0.085,
-                                 width:mdw*0.085,
-                                 decoration: BoxDecoration(
-                                   color: Color(0xFF757575),
-                                   shape: BoxShape.circle,
-                                 ),
-                               ),
+                               Colorbox(mdh: mdh, mdw: mdw, clr: Color(0xFF202120), onclick: (){}),
+                               Colorbox(mdh: mdh, mdw: mdw, clr: Color(0xFF0e99b0), onclick: (){}),
+                               Colorbox(mdh: mdh, mdw: mdw, clr: Color(0xFF7a5449), onclick: (){}),
+                               Colorbox(mdh: mdh, mdw: mdw, clr: Color(0xFFd9d9d9), onclick: (){}),
+                               Colorbox(mdh: mdh, mdw: mdw, clr: Color(0xFF757575), onclick: (){}),
                              ],
                            ),
                          ),
@@ -175,44 +140,10 @@ class ProductDetails extends StatelessWidget{
                            child: Row(
                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                              children: [
-                               Container(
-                                 height:mdh*0.085,
-                                 width:mdw*0.085,
-                                 decoration: BoxDecoration(
-                                   shape: BoxShape.circle,
-                                   border: Border.all(color: Color(0xFF767776))
-                                 ),
-                                 child: Center(child: Text('X',style: TextStyle(fontSize: mdw*0.045),)),
-                               ),
-                               Container(
-                                 height:mdh*0.085,
-                                 width:mdw*0.085,
-                                 decoration: BoxDecoration(
-                                     shape: BoxShape.circle,
-                                     border: Border.all(color: Color(0xFF767776))
-                                 ),
-                                 child: Center(child: Text('XL',style: TextStyle(fontSize: mdw*0.045),)),
-                               ),
-
-                               Container(
-                                 height:mdh*0.085,
-                                 width:mdw*0.085,
-                                 decoration: BoxDecoration(
-                                     shape: BoxShape.circle,
-                                     border: Border.all(color: Color(0xFF767776))
-                                 ),
-                                 child: Center(child: Text('2L',style: TextStyle(fontSize: mdw*0.045),)),
-                               ),
-                               Container(
-                                 height:mdh*0.085,
-                                 width:mdw*0.085,
-                                 decoration: BoxDecoration(
-                                     shape: BoxShape.circle,
-                                     border: Border.all(color: Color(0xFF767776))
-                                 ),
-                                 child: Center(child: Text('M',style: TextStyle(fontSize: mdw*0.045),)),
-                               ),
-
+                               MySizeBox(mdw: mdw, mdh: mdh, size: 'X', onclick: (){}),
+                               MySizeBox(mdw: mdw, mdh: mdh, size: 'XL', onclick: (){}),
+                               MySizeBox(mdw: mdw, mdh: mdh, size: '2L', onclick: (){}),
+                               MySizeBox(mdw: mdw, mdh: mdh, size: 'M', onclick: (){}),
                              ],
                            ),
                          ),
@@ -283,4 +214,33 @@ class ProductDetails extends StatelessWidget{
      ),
    );
   }
+  Widget Colorbox({required double mdh,required double mdw,required Color clr,required VoidCallback onclick})
+  {
+    return GestureDetector(
+      onTap: onclick,
+      child: Container(
+        height:mdh*0.085,
+        width:mdw*0.085,
+        decoration: BoxDecoration(
+          color: clr,
+          shape: BoxShape.circle,
+        ),
+      ),
+    );
+  }
+}
+Widget MySizeBox({required double mdw,required double mdh,required String size,required VoidCallback onclick})
+{
+  return GestureDetector(
+    onTap: onclick,
+    child: Container(
+      height:mdh*0.085,
+      width:mdw*0.085,
+      decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(color: Color(0xFF767776))
+      ),
+      child: Center(child: Text('${size}',style: TextStyle(fontSize: mdw*0.045),)),
+    ),
+  );
 }
