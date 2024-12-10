@@ -25,6 +25,7 @@ ThemeData LightTheme()
       ),
     ),
     bottomNavigationBarTheme:BottomNavigationBarThemeData(
+      backgroundColor: Scaffold_color,
       selectedIconTheme: IconThemeData(
         color: Cursor_color
       ),
