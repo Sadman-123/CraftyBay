@@ -35,7 +35,7 @@ class ProductDetails extends StatelessWidget{
        child: Column(
          children: [
            Expanded(flex: 3,child: Container(
-             color: Color(0xFFf3f2f2),
+             color: Color(0xFFe6f7f6),
              child: Center(
                child: Hero(tag: "$productPic",child: Image.asset('$productPic')),
              ),

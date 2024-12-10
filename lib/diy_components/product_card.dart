@@ -47,7 +47,7 @@ Widget Product_Card({required BuildContext context,required double mdh,required 
                                   ]
                               ),
                             ),
-                            InkWell(onTap:(){onLike();},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFF93dddd),),))
+                            InkWell(onTap:(){onLike();},child: Container(decoration:BoxDecoration(color: Color(0xFF2fbaba),borderRadius: BorderRadius.circular(5)),padding: EdgeInsets.all(4),child: FaIcon(FontAwesomeIcons.heart,color: Color(0xFFfefffe),),))
                           ],
                         ),
                       )
