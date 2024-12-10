@@ -57,9 +57,10 @@ class ProductDetails extends StatelessWidget{
                                GestureDetector(
                                  onTap: (){product.increase_product();},
                                  child: Container(
-                                   child: Icon(Icons.add),
+                                   child: Icon(Icons.add,color: Color(0xFFfefffe),),
                                    decoration: BoxDecoration(
-                                     color: Color(0xFF07afae)
+                                     color: Color(0xFF07afae),
+                                     borderRadius: BorderRadius.circular(5)
                                    ),
                                    padding: EdgeInsets.all(3),
                                  ),
@@ -70,9 +71,10 @@ class ProductDetails extends StatelessWidget{
                                GestureDetector(
                                  onTap: (){product.decrease_product();},
                                  child: Container(
-                                   child: Icon(Icons.remove),
+                                   child: Icon(Icons.remove,color: Color(0xFFfefffe)),
                                    decoration: BoxDecoration(
-                                       color: Color(0xFF07afae)
+                                       color: Color(0xFF07afae),
+                                       borderRadius: BorderRadius.circular(5)
                                    ),
                                    padding: EdgeInsets.all(3),
                                  ),
