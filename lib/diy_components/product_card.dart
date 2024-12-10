@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 Widget Product_Card({required BuildContext context,required double mdh,required double mdw,required String product_pic,required String product_title,required String product_price,required String product_rating,required VoidCallback onLike})
 {
   Homecontroller home=Get.find();
-  return InkWell(
+  return GestureDetector(
     onTap: (){
       Get.toNamed('/product_details',arguments:{
         'product_pic':product_pic,
