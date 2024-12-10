@@ -91,7 +91,15 @@ class MainScreen extends StatelessWidget{
                         {
                           'image':"assets/pics/shoe.png",
                           'text':'Happy New year Special Deal Save 30%'
-                        }
+                        },
+                        {
+                          'image':"assets/pics/glass.png",
+                          'text':'Buy Sunglass Hot Deal Save 40%'
+                        },
+                        {
+                          'image':"assets/pics/watch.png",
+                          'text':'Get Limited Edition Watch Now'
+                        },
                       ], mdw: mdw, mdh: mdh),
                     ),
                     Container(
@@ -135,9 +143,9 @@ class MainScreen extends StatelessWidget{
                               child: Row(
                                 children: [
                                   Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '1200', product_rating: '5.5',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/glass.png', product_title: "New year Special Glass 40", product_price: '420', product_rating: '4.1',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/watch.png', product_title: "Limited Edition Watch 30", product_price: '1300', product_rating: '5.0',onLike: (){}),
+                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/glass.png', product_title: "New year Special Glass 30", product_price: '420', product_rating: '4.1',onLike: (){}),
                                 ],
                               ),
                             ),
