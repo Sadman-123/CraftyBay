@@ -1,8 +1,10 @@
+import 'package:craftybay/home_screens/controllers/product_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class ProductDetails extends StatelessWidget{
+  ProductController product=Get.find();
   @override
   Widget build(BuildContext context) {
     var mdw=MediaQuery.sizeOf(context).width;
@@ -12,12 +14,13 @@ class ProductDetails extends StatelessWidget{
     final String productTitle = data['product_title'];
     final String productPrice = data['product_price'];
     final String productRating = data['product_rating'];
+    product.setProductPrice(double.parse(productPrice));
    return Scaffold(
      appBar: AppBar(
        automaticallyImplyLeading: false,
        title: Row(
          children: [
-           IconButton(onPressed: (){Navigator.pop(context);}, icon: Icon(CupertinoIcons.chevron_left,color: Color(0xFF010001),)),
+           IconButton(onPressed: (){Navigator.pop(context);product.clearcal();}, icon: Icon(CupertinoIcons.chevron_left,color: Color(0xFF010001),)),
            SizedBox(width: mdw*0.025,),
            Text("Product Details",style: TextStyle(color: Color(0xFF515051)),),
          ],
@@ -47,22 +50,28 @@ class ProductDetails extends StatelessWidget{
                          Container(
                            child: Row(
                              children: [
-                               Container(
-                                 child: Icon(Icons.add),
-                                 decoration: BoxDecoration(
-                                   color: Color(0xFF07afae)
+                               GestureDetector(
+                                 onTap: (){product.increase_product();},
+                                 child: Container(
+                                   child: Icon(Icons.add),
+                                   decoration: BoxDecoration(
+                                     color: Color(0xFF07afae)
+                                   ),
+                                   padding: EdgeInsets.all(3),
                                  ),
-                                 padding: EdgeInsets.all(3),
                                ),
                                SizedBox(width: mdw*0.03,),
-                               Text("0",style: TextStyle(fontSize: mdw*0.079),),
+                               Obx(()=>Text("${product.qty.value}",style: TextStyle(fontSize: mdw*0.079),)),
                                SizedBox(width: mdw*0.03,),
-                               Container(
-                                 child: Icon(Icons.remove),
-                                 decoration: BoxDecoration(
-                                     color: Color(0xFF07afae)
+                               GestureDetector(
+                                 onTap: (){product.decrease_product();},
+                                 child: Container(
+                                   child: Icon(Icons.remove),
+                                   decoration: BoxDecoration(
+                                       color: Color(0xFF07afae)
+                                   ),
+                                   padding: EdgeInsets.all(3),
                                  ),
-                                 padding: EdgeInsets.all(3),
                                ),
                              ],
                            ),
@@ -235,7 +244,7 @@ class ProductDetails extends StatelessWidget{
                        child: Column(
                          children: [
                            Text("Price",style: TextStyle(color: Color(0xFF666767),fontSize: mdw*0.045),),
-                           Text("$productPrice\$",style: TextStyle(color: Color(0xFF0caeb1),fontSize: mdw*0.059),)
+                           Obx(()=>Text("${product.totalPrice}\$",style: TextStyle(color: Color(0xFF0caeb1),fontSize: mdw*0.059),))
                          ],
                          crossAxisAlignment: CrossAxisAlignment.start,
                        ),
