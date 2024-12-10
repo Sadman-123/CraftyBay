@@ -40,6 +40,7 @@ class ProductDetails extends StatelessWidget{
                child: Hero(tag: "$productPic",child: Image.asset('$productPic')),
              ),
            )),
+           SizedBox(height: mdh*0.007,),
            Expanded(flex: 4,child: SingleChildScrollView(
              child: Container(
                width: double.infinity,
