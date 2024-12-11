@@ -1,12 +1,13 @@
-import 'package:craftybay/auth_screens/login_screen.dart';
-import 'package:craftybay/auth_screens/otp_screen.dart';
-import 'package:craftybay/auth_screens/register_screen.dart';
-import 'package:craftybay/auth_screens/splash_screen.dart';
-import 'package:craftybay/home_screens/home_screen.dart';
-import 'package:craftybay/home_screens/sub/product_details.dart';
-import 'package:craftybay/stylesheet/style.dart';
+import 'package:craftybay/application/state_holders_bindings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../presentation/ui/auth_screens/login_screen.dart';
+import '../presentation/ui/auth_screens/otp_screen.dart';
+import '../presentation/ui/auth_screens/register_screen.dart';
+import '../presentation/ui/auth_screens/splash_screen.dart';
+import '../presentation/ui/home_screens/home_screen.dart';
+import '../presentation/ui/home_screens/sub/product_details.dart';
+import '../presentation/ui/stylesheet/style.dart';
 class CraftyBay extends StatelessWidget
 {
   @override
@@ -15,6 +16,7 @@ class CraftyBay extends StatelessWidget
       debugShowCheckedModeBanner: false,
       theme: LightTheme(),
       themeMode: ThemeMode.light,
+      initialBinding: StateHoldersBindings(),
       initialRoute: '/splash',
       getPages: [
         GetPage(name:'/splash' , page: () =>SplashScreen() ,transition: Transition.cupertino),
