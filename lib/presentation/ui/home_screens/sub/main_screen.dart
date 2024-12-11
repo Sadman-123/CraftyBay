@@ -26,15 +26,15 @@ class MainScreen extends StatelessWidget{
             actions: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(backgroundColor: Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.bell)),),
+                child: CircleAvatar(backgroundColor: Get.isDarkMode?Colors.amber:Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.bell)),),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(backgroundColor: Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.phone)),),
+                child: CircleAvatar(backgroundColor: Get.isDarkMode?Colors.amber:Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.phone)),),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(backgroundColor: Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.person)),),
+                child: CircleAvatar(backgroundColor: Get.isDarkMode?Colors.amber:Color(0xFFf3f2f2),child: IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.person)),),
               ),
             ],
           ),

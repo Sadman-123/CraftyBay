@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../stylesheet/colors.dart';
+import 'package:get/get.dart';
 import '../stylesheet/widgets_style.dart';
 class SplashScreen extends StatefulWidget{
   @override
@@ -21,9 +22,9 @@ class _SplashScreenState extends State<SplashScreen> {
     var mdh=MediaQuery.sizeOf(context).height;
     var mdw=MediaQuery.sizeOf(context).width;
     return Scaffold(
-      backgroundColor:AppColors.Scaffold_color,
+      backgroundColor:Get.isDarkMode?Color(0xFF151219):AppColors.Scaffold_color,
       appBar: AppBar(
-        backgroundColor: AppColors.Scaffold_color,
+        backgroundColor: Get.isDarkMode?Color(0xFF151219):AppColors.Scaffold_color,
       ),
       body: Center(
         child: Column(

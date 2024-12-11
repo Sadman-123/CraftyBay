@@ -1,3 +1,4 @@
+import 'package:craftybay/presentation/ui/stylesheet/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -21,9 +22,9 @@ class ProductDetails extends StatelessWidget{
        automaticallyImplyLeading: false,
        title: Row(
          children: [
-           IconButton(onPressed: (){Navigator.pop(context);product.clearcal();}, icon: Icon(CupertinoIcons.chevron_left,color: Color(0xFF010001),)),
+           IconButton(onPressed: (){Navigator.pop(context);product.clearcal();}, icon: Icon(CupertinoIcons.chevron_left,color: Get.isDarkMode?AppColors.Scaffold_color:Color(0xFF010001),)),
            SizedBox(width: mdw*0.025,),
-           Text("Product Details",style: TextStyle(color: Color(0xFF515051)),),
+           Text("Product Details",style: TextStyle(color: Get.isDarkMode?AppColors.Scaffold_color:Color(0xFF515051)),),
          ],
        ),
      ),
