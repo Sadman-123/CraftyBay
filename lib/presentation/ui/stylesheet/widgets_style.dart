@@ -24,7 +24,7 @@ PinTheme pin_code_theme(double mdw,double mdh)
     width: mdw*0.14,
     textStyle: TextStyle(fontSize: 20, color: Color.fromRGBO(30, 60, 87, 1), fontWeight: FontWeight.w600),
     decoration: BoxDecoration(
-      border: Border.all(color: Cursor_color),
+      border: Border.all(color: AppColors.Cursor_color),
     ),
   );
 }

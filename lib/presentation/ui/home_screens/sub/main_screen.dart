@@ -64,7 +64,7 @@ class MainScreen extends StatelessWidget{
                               borderRadius: BorderRadius.circular(14),
                             )
                         ),
-                        cursorColor: Cursor_color,
+                        cursorColor: AppColors.Cursor_color,
                       ),
                     ),
                     Container(
