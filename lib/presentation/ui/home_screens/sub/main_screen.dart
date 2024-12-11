@@ -2,11 +2,11 @@ import 'package:craftybay/presentation/ui/home_screens/sub/user_review_part/crea
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import '../../../state_holders/home/homecontroller.dart';
 import '../../diy_components/category_card.dart';
 import '../../diy_components/product_card.dart';
+import 'package:craftybay/data/data.dart';
 import '../../diy_components/promo_card.dart';
 import '../../diy_components/text_related/heading_title.dart';
 import '../../stylesheet/colors.dart';
@@ -16,54 +16,6 @@ class MainScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     var mdw=MediaQuery.sizeOf(context).width;
     var mdh=MediaQuery.sizeOf(context).height;
-    var dat=[
-      {
-        "category_title":"Electronis",
-        "category_icon":FaIcon(FontAwesomeIcons.laptop,color: Color(0xFF07afae))
-      },
-      {
-        "category_title":"Food",
-        "category_icon":FaIcon(FontAwesomeIcons.utensils,color: Color(0xFF07afae))
-      },
-      {
-        "category_title":"Fashion",
-        "category_icon":FaIcon(FontAwesomeIcons.gem,color: Color(0xFF07afae))
-      },
-      {
-        "category_title":"Furniture",
-        "category_icon":FaIcon(FontAwesomeIcons.couch,color: Color(0xFF07afae))
-      },
-    ];
-    var dat2 = [
-      {
-        'id':'0',
-        'product_pic': 'assets/pics/shoe.png',
-        'product_title': "New year Special Shoe 30",
-        'product_price': '1200',
-        'product_rating': '5.5',
-      },
-      {
-        'id':'1',
-        'product_pic': 'assets/pics/glass.png',
-        'product_title': "New year Special Glass 40",
-        'product_price': '420',
-        'product_rating': '4.1',
-      },
-      {
-        'id':'2',
-        'product_pic': 'assets/pics/watch.png',
-        'product_title': "Limited Edition Watch 30",
-        'product_price': '1300',
-        'product_rating': '5.0',
-      },
-      {
-        'id':'3',
-        'product_pic': 'assets/pics/glass.png',
-        'product_title': "New year Special Glass 30",
-        'product_price': '420',
-        'product_rating': '4.1',
-      },
-    ];
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -116,20 +68,7 @@ class MainScreen extends StatelessWidget{
                       ),
                     ),
                     Container(
-                      child: BannerCarousel(promotions: [
-                        {
-                          'image':"assets/pics/shoe.png",
-                          'text':'Happy New year Special Deal Save 30%'
-                        },
-                        {
-                          'image':"assets/pics/glass.png",
-                          'text':'Buy Sunglass Hot Deal Save 40%'
-                        },
-                        {
-                          'image':"assets/pics/watch.png",
-                          'text':'Get Limited Edition Watch Now'
-                        },
-                      ], mdw: mdw, mdh: mdh),
+                      child: BannerCarousel(promotions: promotions, mdw: mdw, mdh: mdh),
                     ),
                     Container(
                       margin: EdgeInsets.only(
