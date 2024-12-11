@@ -101,7 +101,7 @@ class MainScreen extends StatelessWidget{
                       width: double.infinity,
                       child: Column(
                         children: [
-                          HeadingTitle(mdw: mdw, title: "Popular", onseeAllTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => CreateReview(),));}),
+                          HeadingTitle(mdw: mdw, title: "Popular", onseeAllTap: (){Get.toNamed('/create_review');}),
                           SizedBox(
                               height:mdh*0.01
                           ),
