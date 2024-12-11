@@ -20,8 +20,8 @@ class OtpScreen extends StatelessWidget{
                 Container(
                   child: Hero(tag: "logo",child: SvgPicture.asset('assets/pics/logo.svg',width: mdw*0.295,)),
                 ),
-                Container(child: Text("Enter OTP Code",style: Complete_Profile_Txt(mdw),),),
-                Container(child: Text("A 4 Digit OTP Code has been sent",style: SubTxt1(mdw),),),
+                Container(child: Text("Enter OTP Code",style: WidgetsStyle.Complete_Profile_Txt(mdw),),),
+                Container(child: Text("A 4 Digit OTP Code has been sent",style: WidgetsStyle.SubTxt1(mdw),),),
                 Container(
                   width: mdw*0.83,
                   margin: EdgeInsets.only(
@@ -31,7 +31,7 @@ class OtpScreen extends StatelessWidget{
                     length: 4,
                     keyboardType: TextInputType.number,
                     pinAnimationType: PinAnimationType.scale,
-                    defaultPinTheme: pin_code_theme(mdw, mdh),
+                    defaultPinTheme: WidgetsStyle.pin_code_theme(mdw, mdh),
                     onChanged: (pin){
 
                     },
@@ -40,10 +40,10 @@ class OtpScreen extends StatelessWidget{
                 SizedBox(height: mdh*0.04,),
                 Container(
                   decoration: BoxDecoration(
-                      color: Registration_Button_Color,
+                      color: AppColors.Registration_Button_Color,
                       borderRadius: BorderRadius.circular(14)
                   ),
-                  child: Center(child: Text("Next",style: Registration_Button_Txt(mdw),)),
+                  child: Center(child: Text("Next",style: WidgetsStyle.Registration_Button_Txt(mdw),)),
                   width: mdw*0.83,
                   height: mdh*0.06,
                 ),
@@ -51,18 +51,18 @@ class OtpScreen extends StatelessWidget{
                 Container(
                   child: RichText(
                     text: TextSpan(
-                      style: Rich_Txt_1(mdw),
+                      style: WidgetsStyle.Rich_Txt_1(mdw),
                       children: [
                         TextSpan(text: "This code will expire in"),
                         TextSpan(text: " "),
-                        TextSpan(text: "120s",style: TextStyle(color: Registration_Button_Color,fontWeight: FontWeight.bold))
+                        TextSpan(text: "120s",style: TextStyle(color: AppColors.Registration_Button_Color,fontWeight: FontWeight.bold))
                       ]
                     ),
                   ),
                 ),
                 SizedBox(height: mdh*0.001,),
                 Container(
-                  child: TextButton(onPressed: (){}, child: Text("Resend Code",style:Resend_Txt(mdw),))
+                  child: TextButton(onPressed: (){}, child: Text("Resend Code",style:WidgetsStyle.Resend_Txt(mdw),))
                 )
               ],
             ),

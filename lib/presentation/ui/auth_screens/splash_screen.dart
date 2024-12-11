@@ -21,9 +21,9 @@ class _SplashScreenState extends State<SplashScreen> {
     var mdh=MediaQuery.sizeOf(context).height;
     var mdw=MediaQuery.sizeOf(context).width;
     return Scaffold(
-      backgroundColor:Scaffold_color,
+      backgroundColor:AppColors.Scaffold_color,
       appBar: AppBar(
-        backgroundColor: Scaffold_color,
+        backgroundColor: AppColors.Scaffold_color,
       ),
       body: Center(
         child: Column(
@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Spacer(),
             CircularProgressIndicator(color: Color(0xFF06afaf),),
             SizedBox(height: mdh*0.03,),
-            Text("Version 1.1",style: Version_Txt(),),
+            Text("Version 1.1",style: WidgetsStyle.Version_Txt(),),
             SizedBox(height: mdh*0.12,)
           ],
         ),

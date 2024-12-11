@@ -1,6 +1,6 @@
+import 'package:craftybay/presentation/ui/stylesheet/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../../stylesheet/colors.dart';
 import '../../../stylesheet/widgets_style.dart';
 class CreateReview extends StatelessWidget{
   @override
@@ -35,7 +35,7 @@ class CreateReview extends StatelessWidget{
                       decoration: InputDecoration(
                           hintText: "First Name"
                       ),
-                      cursorColor: Cursor_color,
+                      cursorColor: AppColors.Cursor_color,
                     ),
                   ),
                   Container(
@@ -47,7 +47,7 @@ class CreateReview extends StatelessWidget{
                       decoration: InputDecoration(
                           hintText: "Last Name"
                       ),
-                      cursorColor: Cursor_color,
+                      cursorColor: AppColors.Cursor_color,
                     ),
                   ),
                   Container(
@@ -60,16 +60,16 @@ class CreateReview extends StatelessWidget{
                       decoration: InputDecoration(
                           hintText: "Write Review"
                       ),
-                      cursorColor: Cursor_color,
+                      cursorColor: AppColors.Cursor_color,
                     ),
                   ),
                   SizedBox(height: mdh*0.03,),
                   Container(
                     decoration: BoxDecoration(
-                        color: Registration_Button_Color,
+                        color: AppColors.Registration_Button_Color,
                         borderRadius: BorderRadius.circular(14)
                     ),
-                    child: Center(child: Text("Submit",style: Registration_Button_Txt(mdw),)),
+                    child: Center(child: Text("Submit",style: WidgetsStyle.Registration_Button_Txt(mdw),)),
                     width: mdw*0.83,
                     height: mdh*0.06,
                   )
