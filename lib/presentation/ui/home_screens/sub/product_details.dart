@@ -14,6 +14,7 @@ class ProductDetails extends StatelessWidget{
     final String productTitle = data['product_title'];
     final String productPrice = data['product_price'];
     final String productRating = data['product_rating'];
+    final String id=data['id'];
     product.setProductPrice(double.parse(productPrice));
    return Scaffold(
      appBar: AppBar(
@@ -37,7 +38,7 @@ class ProductDetails extends StatelessWidget{
            Expanded(flex: 3,child: Container(
              color: Color(0xFFe6f7f6),
              child: Center(
-               child: Hero(tag: "$productPic",child: Image.asset('$productPic')),
+               child: Hero(tag: '${id}_${productPic}',child: Image.asset('$productPic')),
              ),
            )),
            SizedBox(height: mdh*0.007,),

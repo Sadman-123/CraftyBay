@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../stylesheet/style.dart';
+import '../stylesheet/colors.dart';
+import '../stylesheet/widgets_style.dart';
 class LoginScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

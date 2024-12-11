@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../stylesheet/style.dart';
+import '../stylesheet/colors.dart';
+import '../stylesheet/widgets_style.dart';
 class RegisterScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

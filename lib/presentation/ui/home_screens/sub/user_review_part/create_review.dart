@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../../stylesheet/style.dart';
+import '../../../stylesheet/colors.dart';
+import '../../../stylesheet/widgets_style.dart';
 class CreateReview extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

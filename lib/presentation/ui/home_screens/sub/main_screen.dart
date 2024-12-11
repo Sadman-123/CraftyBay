@@ -9,7 +9,7 @@ import '../../diy_components/category_card.dart';
 import '../../diy_components/product_card.dart';
 import '../../diy_components/promo_card.dart';
 import '../../diy_components/text_related/heading_title.dart';
-import '../../stylesheet/style.dart';
+import '../../stylesheet/colors.dart';
 class MainScreen extends StatelessWidget{
   Homecontroller home=Get.find();
   @override
@@ -32,6 +32,36 @@ class MainScreen extends StatelessWidget{
       {
         "category_title":"Furniture",
         "category_icon":FaIcon(FontAwesomeIcons.couch,color: Color(0xFF07afae))
+      },
+    ];
+    var dat2 = [
+      {
+        'id':'0',
+        'product_pic': 'assets/pics/shoe.png',
+        'product_title': "New year Special Shoe 30",
+        'product_price': '1200',
+        'product_rating': '5.5',
+      },
+      {
+        'id':'1',
+        'product_pic': 'assets/pics/glass.png',
+        'product_title': "New year Special Glass 40",
+        'product_price': '420',
+        'product_rating': '4.1',
+      },
+      {
+        'id':'2',
+        'product_pic': 'assets/pics/watch.png',
+        'product_title': "Limited Edition Watch 30",
+        'product_price': '1300',
+        'product_rating': '5.0',
+      },
+      {
+        'id':'3',
+        'product_pic': 'assets/pics/glass.png',
+        'product_title': "New year Special Glass 30",
+        'product_price': '420',
+        'product_rating': '4.1',
       },
     ];
     return Scaffold(
@@ -140,12 +170,10 @@ class MainScreen extends StatelessWidget{
                             scrollDirection: Axis.horizontal,
                             child: Container(
                               child: Row(
-                                children: [
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '1200', product_rating: '5.5',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/glass.png', product_title: "New year Special Glass 40", product_price: '420', product_rating: '4.1',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/watch.png', product_title: "Limited Edition Watch 30", product_price: '1300', product_rating: '5.0',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/glass.png', product_title: "New year Special Glass 30", product_price: '420', product_rating: '4.1',onLike: (){}),
-                                ],
+                                children:dat2.map((item){
+                                  print(item.keys);
+                                  return Product_Card('popular',int.parse(item['id']!),context: context, mdh: mdh, mdw: mdw, product_pic: item['product_pic'].toString(), product_title: item['product_title'].toString(), product_price: item['product_price'].toString(), product_rating: item['product_rating'].toString(), onLike: (){});
+                                }).toList()
                               ),
                             ),
                           )
@@ -169,12 +197,9 @@ class MainScreen extends StatelessWidget{
                             scrollDirection: Axis.horizontal,
                             child: Container(
                               child: Row(
-                                children: [
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                ],
+                                  children:dat2.map((item){
+                                    return Product_Card('special',int.parse(item['id']!),context: context, mdh: mdh, mdw: mdw, product_pic: item['product_pic'].toString(), product_title: item['product_title'].toString(), product_price: item['product_price'].toString(), product_rating: item['product_rating'].toString(), onLike: (){});
+                                  }).toList()
                               ),
                             ),
                           )
@@ -198,12 +223,9 @@ class MainScreen extends StatelessWidget{
                             scrollDirection: Axis.horizontal,
                             child: Container(
                               child: Row(
-                                children: [
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                  Product_Card(context: context,mdh: mdh, mdw: mdw, product_pic: 'assets/pics/shoe.png', product_title: "New year Special Shoe 30", product_price: '123', product_rating: '3.5',onLike: (){}),
-                                ],
+                                  children:dat2.map((item){
+                                    return Product_Card('new',int.parse(item['id']!),context: context, mdh: mdh, mdw: mdw, product_pic: item['product_pic'].toString(), product_title: item['product_title'].toString(), product_price: item['product_price'].toString(), product_rating: item['product_rating'].toString(), onLike: (){});
+                                  }).toList()
                               ),
                             ),
                           )
