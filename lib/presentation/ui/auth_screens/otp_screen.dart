@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pinput/pinput.dart';
-
 import '../stylesheet/colors.dart';
 import '../stylesheet/widgets_style.dart';
 class OtpScreen extends StatelessWidget{
