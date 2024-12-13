@@ -17,7 +17,7 @@ class CraftyBay extends StatelessWidget
       debugShowCheckedModeBanner: false,
       theme: AppThemes.LightTheme,
       darkTheme: AppThemes.DarkTheme,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       initialBinding: StateHoldersBindings(),
       initialRoute: '/splash',
       getPages: [
