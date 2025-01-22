@@ -77,19 +77,37 @@ class MainScreen extends StatelessWidget{
                           top: 10
                       ),
                       width: double.infinity,
-                      height: mdh*0.15,
+                      height: mdh*0.18,
                       child: Column(
                         children: [
-                          HeadingTitle(mdw: mdw, title: "All categories", onseeAllTap: (){home.ind.value=1;}),
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Container(
+                          HeadingTitle(
+                            mdw: mdw,
+                            title: "All categories",
+                            onseeAllTap: () {
+                              home.ind.value = 1;
+                            },
+                          ),
+                          Obx(() {
+                            if (home.categoryList.isEmpty) {
+                              return Center(
+                                child: CircularProgressIndicator(),
+                              );
+                            }
+                            return SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
                               child: Row(
-                                children: List.generate(dat.length, (index) => CategoryCard(mdw: mdw, category_title: dat[index]['category_title'].toString(), category_icon: dat[index]['category_icon'] as Widget,),
+                                children: List.generate(
+                                  home.categoryList.length,
+                                      (index) => CategoryCard(
+                                    mdw: mdw,
+                                    category_title: home.categoryList[index]['categoryName'].toString(),
+                                    category_pic: home.categoryList[index]['categoryImg'],
+                                  ),
+                                ),
                               ),
-                            ),
-                          )
-                          )],
+                            );
+                          }),
+                        ],
                       ),
                     ),
                     Container(

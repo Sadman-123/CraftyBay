@@ -137,24 +137,26 @@ class CategoryScreen extends StatelessWidget {
           SliverToBoxAdapter(
             child: Container(
               margin: EdgeInsets.all(8),
-              child: GridView.builder(
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  childAspectRatio: 1 / 1,
-                ),
-                itemCount: dat.length,
-                itemBuilder: (context, index) {
-                  return CategoryCard(
-                    mdw: mdw,
-                    category_title: dat[index]['category_title'].toString(),
-                    category_icon: dat[index]['category_icon'] as Widget,
-                  );
-                },
-              ),
+              child: Obx((){
+                return GridView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 1 / 1,
+                  ),
+                  itemCount: home.categoryList.length,
+                  itemBuilder: (context, index) {
+                    return CategoryCard(
+                      mdw: mdw,
+                      category_title: home.categoryList[index]['categoryName'].toString(),
+                      category_pic: home.categoryList[index]['categoryImg'].toString(),
+                    );
+                  },
+                );
+              }),
             ),
           ),
         ],
