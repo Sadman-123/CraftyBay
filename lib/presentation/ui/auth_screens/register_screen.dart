@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import '../diy_components/text_related/link_signinup.dart';
 import '../stylesheet/colors.dart';
 import '../stylesheet/widgets_style.dart';
 class RegisterScreen extends StatelessWidget{
@@ -8,7 +10,7 @@ class RegisterScreen extends StatelessWidget{
     var mdw=MediaQuery.sizeOf(context).width;
     var mdh=MediaQuery.sizeOf(context).height;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(automaticallyImplyLeading: false,),
       body: SingleChildScrollView(
         child: Center(
           child: Container(
@@ -79,7 +81,9 @@ class RegisterScreen extends StatelessWidget{
                   child: Center(child: Text("Complete",style: WidgetsStyle.Registration_Button_Txt(mdw),)),
                   width: mdw*0.83,
                   height: mdh*0.06,
-                )
+                ),
+                SizedBox(height: mdh*0.03,),
+                LinkSigninup(mdw, mdh, (){Get.toNamed('/login');}, txt1: "Already have account?", txt2: 'Login Now')
               ],
             ),
           ),

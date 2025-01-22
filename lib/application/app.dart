@@ -19,7 +19,7 @@ class CraftyBay extends StatelessWidget
       darkTheme: AppThemes.DarkTheme,
       themeMode: ThemeMode.light,
       initialBinding: StateHoldersBindings(),
-      initialRoute: '/home',
+      initialRoute: '/splash',
       getPages: [
         GetPage(name:'/splash' , page: () =>SplashScreen() ,transition: Transition.cupertino),
         GetPage(name: '/register', page: ()=>RegisterScreen(),transition: Transition.cupertino),

@@ -1,14 +1,16 @@
+import 'package:craftybay/presentation/ui/diy_components/text_related/link_signinup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../stylesheet/colors.dart';
 import '../stylesheet/widgets_style.dart';
+import 'package:get/get.dart';
 class LoginScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     var mdw=MediaQuery.sizeOf(context).width;
     var mdh=MediaQuery.sizeOf(context).height;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(automaticallyImplyLeading: false,),
       body: SingleChildScrollView(
         child: Center(
           child: Container(
@@ -41,7 +43,9 @@ class LoginScreen extends StatelessWidget{
                   child: Center(child: Text("Next",style: WidgetsStyle.Registration_Button_Txt(mdw),)),
                   width: mdw*0.83,
                   height: mdh*0.06,
-                )
+                ),
+                SizedBox(height: mdh*0.03,),
+                LinkSigninup(mdw, mdh, (){Get.toNamed('/register');}, txt1: "Don't have account?", txt2: 'Create One')
               ],
             ),
           ),
