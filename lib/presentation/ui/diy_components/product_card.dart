@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import '../../state_holders/home/homecontroller.dart';
-Widget Product_Card(String page,int id,{required BuildContext context,required double mdh,required double mdw,required String product_pic,required String product_title,required String product_price,required String product_rating,required VoidCallback onLike})
+Widget Product_Card(String page,int id,{required BuildContext context,required double mdh,required double mdw,required String product_pic,required String product_title,required String product_price,required int product_rating,required VoidCallback onLike})
 {
   Homecontroller home=Get.find();
   return GestureDetector(
@@ -26,7 +26,7 @@ Widget Product_Card(String page,int id,{required BuildContext context,required d
         width: mdw*0.45,
         child: Column(
           children: [
-            Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Hero(tag: '${page}_${product_pic}',child: Image.asset('$product_pic',width: mdw*0.5,)),),)),
+            Expanded(flex: 2,child: Container(width: double.infinity,decoration: BoxDecoration(color: Color(0xFFe6f7f6),borderRadius: BorderRadius.vertical(top: Radius.circular(14))),child: Center(child: Hero(tag: '${page}_${product_pic}',child: Image.network('$product_pic',width: mdw*0.5,)),),)),
             Expanded(
                 flex: 2,
                 child: Container(

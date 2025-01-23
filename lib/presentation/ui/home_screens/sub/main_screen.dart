@@ -123,17 +123,24 @@ class MainScreen extends StatelessWidget{
                           SizedBox(
                               height:mdh*0.01
                           ),
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Container(
-                              child: Row(
-                                children:dat2.map((item){
-                                  print(item.keys);
-                                  return Product_Card('popular',int.parse(item['id']!),context: context, mdh: mdh, mdw: mdw, product_pic: item['product_pic'].toString(), product_title: item['product_title'].toString(), product_price: item['product_price'].toString(), product_rating: item['product_rating'].toString(), onLike: (){});
-                                }).toList()
-                              ),
-                            ),
-                          )
+                          Obx((){
+                            if(home.popularList.isEmpty)
+                              {
+                                return Center(child: CircularProgressIndicator(),);
+                              }
+                            else{
+                              return SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Container(
+                                  child: Row(
+                                      children: List.generate(home.popularList.length, (index) {
+                                        return Product_Card(home.popularList[index]['remark'], home.popularList[index]['id'], context: context, mdh: mdh, mdw: mdw, product_pic: home.popularList[index]['image'], product_title: home.popularList[index]['title'], product_price: home.popularList[index]['price'], product_rating: home.popularList[index]['star'], onLike: () {},);
+                                      },),
+                                  ),
+                                ),
+                              );
+                            }
+                          })
                         ],
                       ),
                     ),
@@ -150,16 +157,24 @@ class MainScreen extends StatelessWidget{
                           SizedBox(
                               height:mdh*0.01
                           ),
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Container(
-                              child: Row(
-                                  children:dat2.map((item){
-                                    return Product_Card('special',int.parse(item['id']!),context: context, mdh: mdh, mdw: mdw, product_pic: item['product_pic'].toString(), product_title: item['product_title'].toString(), product_price: item['product_price'].toString(), product_rating: item['product_rating'].toString(), onLike: (){});
-                                  }).toList()
-                              ),
-                            ),
-                          )
+                          Obx((){
+                            if(home.specialList.isEmpty)
+                            {
+                              return Center(child: CircularProgressIndicator(),);
+                            }
+                            else{
+                              return SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Container(
+                                  child: Row(
+                                    children: List.generate(home.specialList.length, (index) {
+                                      return Product_Card(home.specialList[index]['remark'], home.specialList[index]['id'], context: context, mdh: mdh, mdw: mdw, product_pic: home.specialList[index]['image'], product_title: home.specialList[index]['title'], product_price: home.specialList[index]['price'], product_rating: home.specialList[index]['star'], onLike: () {},);
+                                    },),
+                                  ),
+                                ),
+                              );
+                            }
+                          })
                         ],
                       ),
                     ),
@@ -176,16 +191,24 @@ class MainScreen extends StatelessWidget{
                           SizedBox(
                               height:mdh*0.01
                           ),
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Container(
-                              child: Row(
-                                  children:dat2.map((item){
-                                    return Product_Card('new',int.parse(item['id']!),context: context, mdh: mdh, mdw: mdw, product_pic: item['product_pic'].toString(), product_title: item['product_title'].toString(), product_price: item['product_price'].toString(), product_rating: item['product_rating'].toString(), onLike: (){});
-                                  }).toList()
-                              ),
-                            ),
-                          )
+                          Obx((){
+                            if(home.newList.isEmpty)
+                            {
+                              return Center(child: CircularProgressIndicator(),);
+                            }
+                            else{
+                              return SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Container(
+                                  child: Row(
+                                    children: List.generate(home.newList.length, (index) {
+                                      return Product_Card(home.newList[index]['remark'], home.newList[index]['id'], context: context, mdh: mdh, mdw: mdw, product_pic: home.newList[index]['image'], product_title: home.newList[index]['title'], product_price: home.newList[index]['price'], product_rating: home.newList[index]['star'], onLike: () {},);
+                                    },),
+                                  ),
+                                ),
+                              );
+                            }
+                          })
                         ],
                       ),
                     ),
