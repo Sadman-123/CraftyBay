@@ -1,3 +1,4 @@
+import 'package:craftybay/presentation/ui/diy_components/authbutton.dart';
 import 'package:craftybay/presentation/ui/diy_components/text_related/link_signinup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -35,15 +36,7 @@ class LoginScreen extends StatelessWidget{
                   ),
                 ),
                 SizedBox(height: mdh*0.03,),
-                Container(
-                  decoration: BoxDecoration(
-                      color: AppColors.Registration_Button_Color,
-                      borderRadius: BorderRadius.circular(14)
-                  ),
-                  child: Center(child: Text("Next",style: WidgetsStyle.Registration_Button_Txt(mdw),)),
-                  width: mdw*0.83,
-                  height: mdh*0.06,
-                ),
+                Authbutton(mdw, mdh, (){Get.toNamed('/otp');}, Buttontxt: "Next"),
                 SizedBox(height: mdh*0.03,),
                 LinkSigninup(mdw, mdh, (){Get.toNamed('/register');}, txt1: "Don't have account?", txt2: 'Create One')
               ],

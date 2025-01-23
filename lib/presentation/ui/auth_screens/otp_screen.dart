@@ -1,3 +1,5 @@
+import 'package:craftybay/presentation/ui/diy_components/authbutton.dart';
+import 'package:craftybay/presentation/ui/diy_components/text_related/link_signinup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pinput/pinput.dart';
@@ -9,7 +11,7 @@ class OtpScreen extends StatelessWidget{
     var mdw=MediaQuery.sizeOf(context).width;
     var mdh=MediaQuery.sizeOf(context).height;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(automaticallyImplyLeading: false,),
       body: SingleChildScrollView(
         child: Center(
           child: Container(
@@ -37,28 +39,9 @@ class OtpScreen extends StatelessWidget{
                   ),
                 ),
                 SizedBox(height: mdh*0.04,),
-                Container(
-                  decoration: BoxDecoration(
-                      color: AppColors.Registration_Button_Color,
-                      borderRadius: BorderRadius.circular(14)
-                  ),
-                  child: Center(child: Text("Next",style: WidgetsStyle.Registration_Button_Txt(mdw),)),
-                  width: mdw*0.83,
-                  height: mdh*0.06,
-                ),
+                Authbutton(mdw, mdh, (){}, Buttontxt: "Next"),
                 SizedBox(height: mdh*0.04,),
-                Container(
-                  child: RichText(
-                    text: TextSpan(
-                      style: WidgetsStyle.Rich_Txt_1(mdw),
-                      children: [
-                        TextSpan(text: "This code will expire in"),
-                        TextSpan(text: " "),
-                        TextSpan(text: "120s",style: TextStyle(color: AppColors.Registration_Button_Color,fontWeight: FontWeight.bold))
-                      ]
-                    ),
-                  ),
-                ),
+                LinkSigninup(mdw, mdh, (){}, txt1: "This code will expire in ", txt2: "120s"),
                 SizedBox(height: mdh*0.001,),
                 Container(
                   child: TextButton(onPressed: (){}, child: Text("Resend Code",style:WidgetsStyle.Resend_Txt(mdw),))
