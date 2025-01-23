@@ -1,3 +1,4 @@
+import 'package:craftybay/presentation/ui/diy_components/authbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -73,15 +74,7 @@ class RegisterScreen extends StatelessWidget{
                   ),
                 ),
                 SizedBox(height: mdh*0.03,),
-                Container(
-                  decoration: BoxDecoration(
-                    color: AppColors.Registration_Button_Color,
-                    borderRadius: BorderRadius.circular(14)
-                  ),
-                  child: Center(child: Text("Complete",style: WidgetsStyle.Registration_Button_Txt(mdw),)),
-                  width: mdw*0.83,
-                  height: mdh*0.06,
-                ),
+                Authbutton(mdw, mdh, (){}, Buttontxt: "Complete"),
                 SizedBox(height: mdh*0.03,),
                 LinkSigninup(mdw, mdh, (){Get.toNamed('/login');}, txt1: "Already have account?", txt2: 'Login Now')
               ],
