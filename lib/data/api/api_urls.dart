@@ -5,5 +5,6 @@ class ApiUrls {
   static const String popular_products_url=BaseUrl+'/ListProductByRemark/popular';
   static const String special_products_url=BaseUrl+'/ListProductByRemark/special';
   static const String new_products_url=BaseUrl+'/ListProductByRemark/new';
+  static const String brand_list=BaseUrl+'/BrandList';
 
 }

@@ -98,11 +98,26 @@ class MainScreen extends StatelessWidget{
                               child: Row(
                                 children: List.generate(
                                   home.categoryList.length,
-                                      (index) => CategoryCard(
-                                    mdw: mdw,
-                                    category_title: home.categoryList[index]['categoryName'].toString(),
-                                    category_pic: home.categoryList[index]['categoryImg'],
-                                  ),
+                                      (index){
+                                    if( home.categoryList[index]['categoryName'].toString()=="Mobile")
+                                      {
+                                        return GestureDetector(
+                                          onTap: (){Get.toNamed('/brands');},
+                                          child: CategoryCard(
+                                            mdw: mdw,
+                                            category_title: home.categoryList[index]['categoryName'].toString(),
+                                            category_pic: home.categoryList[index]['categoryImg'],
+                                          ),
+                                        );
+                                      }
+                                    else{
+                                      return CategoryCard(
+                                        mdw: mdw,
+                                        category_title: home.categoryList[index]['categoryName'].toString(),
+                                        category_pic: home.categoryList[index]['categoryImg'],
+                                      );
+                                    }
+                                      },
                                 ),
                               ),
                             );

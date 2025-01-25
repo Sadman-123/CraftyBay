@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../state_holders/home/homecontroller.dart';
 import '../../diy_components/category_card.dart';
-class CategoryScreen extends StatelessWidget {
+class Brands extends StatelessWidget{
   Homecontroller home=Get.find();
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class CategoryScreen extends StatelessWidget {
                 ),
                 SizedBox(width: mdw * 0.025),
                 Text(
-                  "Category",
+                  "Brands",
                   style: TextStyle(color: Color(0xFF515051)),
                 ),
               ],
@@ -48,12 +48,12 @@ class CategoryScreen extends StatelessWidget {
                     mainAxisSpacing: 10,
                     childAspectRatio: 1 / 1,
                   ),
-                  itemCount: home.categoryList.length,
+                  itemCount: home.brandlist.length,
                   itemBuilder: (context, index) {
                     return CategoryCard(
                       mdw: mdw,
-                      category_title: home.categoryList[index]['categoryName'].toString(),
-                      category_pic: home.categoryList[index]['categoryImg'].toString(),
+                      category_title: home.brandlist[index]['brandName'].toString(),
+                      category_pic: home.brandlist[index]['brandImg'].toString(),
                     );
                   },
                 );
